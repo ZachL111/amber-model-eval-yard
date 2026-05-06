@@ -1,0 +1,7 @@
+name,demand,capacity,latency,risk,weight,score,decision,reason
+baseline,59,89,20,10,9,125,review,ml utilities baseline scenario exercises the review path for bounded failure handling
+pressure,76,71,30,23,8,41,review,ml utilities pressure scenario exercises the review path for bounded failure handling
+surge,100,98,24,16,12,178,review,ml utilities surge scenario exercises the review path for bounded failure handling
+degraded,68,59,32,28,7,-23,review,ml utilities degraded scenario exercises the review path for bounded failure handling
+recovery,84,103,22,9,12,197,accept,ml utilities recovery scenario keeps the local fixture within the modeled acceptance band
+boundary,77,78,23,18,9,96,review,ml utilities boundary scenario exercises the review path for bounded failure handling
