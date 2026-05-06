@@ -1,0 +1,73 @@
+{
+  "repo": "amber-model-eval-yard",
+  "language": "Haskell",
+  "category": "ML utilities",
+  "goal": "Create a Haskell reference implementation for eval workflows, centered on state machine modeling, transition tables, and invalid-transition tests.",
+  "review_model": {
+    "terms": [
+      "feature drift",
+      "window width",
+      "metric stability",
+      "explainability"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "feature drift",
+      "signal": 51,
+      "slack": 23,
+      "drag": 30,
+      "confidence": 56,
+      "score": 91,
+      "lane": "hold"
+    },
+    {
+      "name": "stress",
+      "focus": "window width",
+      "signal": 64,
+      "slack": 50,
+      "drag": 31,
+      "confidence": 47,
+      "score": 132,
+      "lane": "watch"
+    },
+    {
+      "name": "edge",
+      "focus": "metric stability",
+      "signal": 48,
+      "slack": 50,
+      "drag": 8,
+      "confidence": 45,
+      "score": 167,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "explainability",
+      "signal": 69,
+      "slack": 30,
+      "drag": 23,
+      "confidence": 70,
+      "score": 169,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "feature drift",
+      "signal": 59,
+      "slack": 20,
+      "drag": 10,
+      "confidence": 76,
+      "score": 184,
+      "lane": "ship"
+    }
+  ]
+}
